@@ -77,3 +77,57 @@ Item的处理如下
     return items;
   }
 ```
+
+## 滑动组件的蓝色波纹效果
+
+在android上，滑动组件默认是有一个蓝色波纹效果，我们可以通过使用`ScrollConfiguration`来包裹滑动组件，并添加`behavior`属性，来消除蓝色波纹。
+
+```dart
+/*
+ * @Author: kcqnly
+ * @Date: 2020-08-28 19:14:51
+ * @Last Modified by: kcqnly
+ * @Last Modified time: 2020-08-28 19:18:35
+ * @message 去除滚动的蓝色回弹
+ */
+
+import 'dart:io';
+
+import 'package:flutter/material.dart';
+
+class MyBehavior extends ScrollBehavior {
+  @override
+  Widget buildViewportChrome(
+      BuildContext context, Widget child, AxisDirection axisDirection) {
+    if (Platform.isAndroid || Platform.isFuchsia) {
+      return child;
+    } else {
+      return super.buildViewportChrome(context, child, axisDirection);
+    }
+  }
+}
+```
+
+```dart
+        Container(
+          height: ScreenUtil().setHeight(300) * list.length,
+          child: ScrollConfiguration(
+            behavior: MyBehavior(),
+            child: ReorderableListView(
+              children: list,
+              onReorder: (int oldIndex, int newIndex) {
+                setState(() {
+                  if (newIndex == list.length) {
+                    newIndex = list.length - 1;
+                  }
+                  var item = list.removeAt(oldIndex);
+                  var course = courseModel.removeAt(oldIndex);
+                  courseModel.insert(newIndex, course);
+                  list.insert(newIndex, item);
+                });
+                CourseUtil.changeIndex(courseModel);
+              },
+            ),
+          ),
+        )
+```
