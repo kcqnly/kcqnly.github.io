@@ -12,9 +12,10 @@
 
 2018年9月进入武汉理工大学信息工程学院，现就读电子信息工程专业
 
-2019年6月 - 2020年6月担任校电子科技协会技术部副部长
+- 2020年9月 - 至今 担任校电子科技协会副会长
+- 2020年8月加入Token团队，负责新掌理Android的开发
 
-主要学习方向：单片机、物联网、前后端开发、Flutter
+主要学习方向：Vue、SpringBoot、Flutter
 
 ## 开源项目
 
@@ -23,6 +24,7 @@
 VSCode C51工程模板，无需打开keil，直接使用VSCode编写51单片机代码，并通过调用bat脚本实现编译，生成hex文件。
 
 项目地址：[VSCode-C51](https://github.com/kcqnly/VSCode-C51)
+视频地址：[舒适！！！使用VSCode写51单片机代码](https://www.bilibili.com/video/BV1DA411v7Cv/)
 
 ### YunYi
 
