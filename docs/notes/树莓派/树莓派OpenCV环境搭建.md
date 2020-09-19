@@ -60,5 +60,3 @@ cv2.destroyAllWindows()
 ```
 
 在使用VNC的情况下，按`esc`键并没有停止，得先用鼠标按到图像窗口上，才能关闭。
-
-![测试](./img/opencv.png)
