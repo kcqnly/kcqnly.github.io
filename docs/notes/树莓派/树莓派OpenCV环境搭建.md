@@ -16,7 +16,11 @@ sudo apt-get install libjasper-dev
 
 ## 安装OpenCV
 
-直接使用pip安装的话，会相当龟速，最好的是直接将文件下载到本地再安装。
+```bash
+sudo pip3 install opencv-contrib-python==3.4.6.27
+```
+
+直接使用pip安装的话，可能会相当龟速，也可以直接将文件下载到本地再安装。
 
 [下载地址（自备梯子）](https://link.zhihu.com/?target=https%3A//www.piwheels.org/simple/opencv-contrib-python/opencv_contrib_python-3.4.3.18-cp37-cp37m-linux_armv7l.whl)
 
