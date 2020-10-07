@@ -13,9 +13,9 @@
 2018年9月进入武汉理工大学信息工程学院，现就读电子信息工程专业
 
 - 2020年9月 - 至今 担任校电子科技协会副会长
-- 2020年8月加入Token团队，负责新掌理Android的开发
+- 2020年7月加入Token团队，负责新掌理Android端的开发
 
-主要学习方向：Vue、SpringBoot、Flutter
+主要学习方向：Vue、SpringBoot、Flutter、单片机
 
 ## 开源项目
 
