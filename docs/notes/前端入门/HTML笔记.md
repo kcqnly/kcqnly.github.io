@@ -1,0 +1,22 @@
+# HTML笔记
+
+[教程地址](https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web)
+
+## 块级元素和内联元素
+
+- 块级元素在页面中以块的形式展现 —— 相对于其前面的内容它会出现在新的一行，其后的内容也会被挤到下一行展现。块级元素通常用于展示页面上结构化的内容，例如段落、列表、导航菜单、页脚等等。一个以block形式展现的块级元素不会被嵌套进内联元素中，但可以嵌套在其它块级元素中。
+
+- 内联元素通常出现在块级元素中并环绕文档内容的一小部分，而不是一整个段落或者一组内容。内联元素不会导致文本换行：它通常出现在一堆文字之间，例如超链接元素`<a>`或者强调元素`<em>`和 `<strong>`。
+
+### 行内（内联）元素列表
+
+- b, big, i, small, tt
+- abbr, acronym, cite, code, dfn, em, kbd, strong, samp, var
+- a, bdo, br, img, map, object, q, script, span, sub, sup
+- button, input, label, select, textarea
+
+## 一些标签的含义
+
+- `<i>` 斜体
+- `<b>` 粗体
+- `<u>` 下划线
