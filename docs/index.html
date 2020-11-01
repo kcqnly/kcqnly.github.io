@@ -36,7 +36,22 @@
             }
             return this.origin.code.apply(this, arguments);
           }
-        }
+        },
+        plugins: [function (hook, vm) {
+          hook.beforeEach(function (html) {
+            if (/githubusercontent\.com/.test(vm.route.file)) {
+              url = vm.route.file
+                .replace('raw.githubusercontent.com', 'github.com')
+                .replace(/\/master/, '/blob/master')
+            } else {
+              url = 'https://github.com/kcqnly/Blog/tree/master/docs/' + vm.route.file
+            }
+            var editHtml = '[:memo: Edit Document](' + url + ')\n'
+            return editHtml +
+              html +
+              '\n\n----\n\n'
+          })
+        }]
       }
     }
   </script>
