@@ -23,6 +23,7 @@
       name: '',
       repo: '',
       coverpage: true,
+      formatUpdated: '{YYYY}/{MM}/{DD} {HH}:{mm}',
       // subMaxLevel: 2,
       markdown: {
         renderer: {
@@ -37,23 +38,24 @@
             return this.origin.code.apply(this, arguments);
           }
         },
-        plugins: [function (hook, vm) {
+      },
+      plugins: [
+        function (hook, vm) {
           hook.beforeEach(function (html) {
             var url =
               'https://github.com/kcqnly/Blog/tree/master/docs/' +
               vm.route.file;
-            var editHtml = '[📝 EDIT DOCUMENT](' + url + ')\n';
+            var editHtml = '[📝 编辑markdown](' + url + ')\n';
 
             return (
-              editHtml +
+              'Last modified {docsify-updated} ' + '\n' +
               html +
               '\n----\n' +
-              'Last modified {docsify-updated} ' +
               editHtml
             );
           });
-        }]
-      }
+        }
+      ]
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
