@@ -46,6 +46,12 @@ pipenv --venv
 
 ## 3. 安装flask
 
+设置镜像(修改Pipfile)
+
+```text
+url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
+```
+
 ```shell
 pipenv install flask
 ```
