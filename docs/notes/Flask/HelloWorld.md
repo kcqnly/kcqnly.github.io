@@ -75,10 +75,17 @@ if __name__ == "__main__":
 ```
 
 项目根目录创建`.flaskenv`文件
+这一步相当于设置环境变量
 
 ```txt
 FLASK_ENV=development
 FALSK_APP=app.py
+```
+
+安装`python-dotenv`使环境变量生效
+
+```shell
+pipenv install python-dotenv
 ```
 
 使用命令运行即可
